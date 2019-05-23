@@ -24,3 +24,4 @@ brew install \
 brew cask install gitup
 brew cask install iterm2
 brew cask install minikube
+brew cask install docker
