@@ -19,7 +19,17 @@ brew install \
 brew install \
   asdf coreutils automake autoconf openssl \
   libyaml readline libxslt libtool unixodbc \
-  unzip curl
+  unzip curl gpg
+
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+
+# One does not simply manage nodejs
+asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+export GNUPGHOME="bash /usr/local/opt/asdf/keyrings/nodejs" && mkdir -p "$GNUPGHOME" && chmod 0700 "$GNUPGHOME"
+# Imports Node.js release team's OpenPGP keys to the keyring
+bash /usr/local/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
 
 brew cask install gitup
 brew cask install iterm2
