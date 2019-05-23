@@ -12,6 +12,10 @@ brew install hub
 brew install \
   kubectx kubernetes-cli kube-ps1
 
+# Small utils
+brew install \
+  jq bat shellcheck
+
 # Asdf and friends
 # Maybe need to run
 # echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
@@ -35,3 +39,5 @@ brew cask install gitup
 brew cask install iterm2
 brew cask install minikube
 brew cask install docker
+
+./install-if-needed.sh
