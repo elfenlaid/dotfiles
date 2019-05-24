@@ -2,4 +2,4 @@
 
 set -ex
 
-ln -sv .zshrc ~
+ln -sv "${PWD}/.zshrc" "${HOME}"
