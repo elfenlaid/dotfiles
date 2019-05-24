@@ -29,5 +29,3 @@ install_if_needed "Spotify" "https://www.spotify.com"
 install_if_needed "Visual Studio Code" "https://code.visualstudio.com/download"
 install_if_needed "xScope" "focking AppStore"
 install_if_needed "Xcode" "focking AppStore"
-
-

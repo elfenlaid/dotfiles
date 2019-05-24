@@ -2,9 +2,6 @@
 
 set -ex
 
-# Heroku cli client
-brew install heroku
-
 # Github cli client
 brew install hub
 
@@ -39,5 +36,7 @@ brew cask install gitup
 brew cask install iterm2
 brew cask install minikube
 brew cask install docker
+brew cask install google-cloud-sdk
+brew install heroku
 
 ./install-if-needed.sh

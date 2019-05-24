@@ -205,3 +205,7 @@ alias kd='kubectl describe'
 alias kg='kubectl get'
 alias kgp='kubectl get pods'
 alias kdp='kubectl describe pods'
+
+# Google cloud completions
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
