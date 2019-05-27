@@ -14,24 +14,8 @@ export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -123,6 +107,13 @@ alias hgrep='fc -El 0 | grep'
 alias w='cd ~/Work'
 alias c='cd ~/Code'
 alias d='cd ~/Downloads'
+
+alias gs='git status --short --branch'
+alias gd='git diff'
+alias gc='git checkout'
+alias gb='git checkout -b'
+alias gm='git checkout master'
+alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
 
 mcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 
