@@ -5,10 +5,6 @@ set -ex
 # Github cli client
 brew install hub
 
-# Kubernetes and friends
-brew install \
-  kubectx kubernetes-cli kube-ps1
-
 # Small utils
 brew install \
   jq bat shellcheck
@@ -32,11 +28,10 @@ export GNUPGHOME="bash /usr/local/opt/asdf/keyrings/nodejs" && mkdir -p "$GNUPGH
 # Imports Node.js release team's OpenPGP keys to the keyring
 bash /usr/local/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
 
-brew cask install gitup
-brew cask install iterm2
-brew cask install minikube
-brew cask install docker
-brew cask install google-cloud-sdk
-brew install heroku
+brew cask install \
+  gitup \
+  iterm2 \
+  docker \
+  heroku
 
 ./install-if-needed.sh
