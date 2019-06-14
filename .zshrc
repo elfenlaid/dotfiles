@@ -20,9 +20,6 @@ ZSH_THEME="robbyrussell"
 # How often to auto-update (in days).
 export UPDATE_ZSH_DAYS=13
 
-# Display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -137,19 +134,5 @@ alias cpr="pull-request"
 alias bekyll="bundle exec jekyll serve --drafts"
 alias draft="bundle exec jekyll draft"
 
-# Kubernetes
-source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-PROMPT='$(kube_ps1)'$PROMPT
-
-source <(kubectl completion zsh)
-
-alias k='kubectl'
-alias klog='kubectl logs -f -p'
-alias kd='kubectl describe'
-alias kg='kubectl get'
-alias kgp='kubectl get pods'
-alias kdp='kubectl describe pods'
-
-# Google cloud completions
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+# Rust
+source ~/.asdf/installs/rust/stable/env
