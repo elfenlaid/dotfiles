@@ -2,12 +2,9 @@
 
 set -ex
 
-# Github cli client
-brew install hub
-
-# Small utils
+# Utils
 brew install \
-  jq bat shellcheck
+  jq bat shellcheck heroku hub
 
 # Asdf and friends
 # Maybe need to run
@@ -24,14 +21,13 @@ asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 
 # One does not simply manage nodejs
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-export GNUPGHOME="bash /usr/local/opt/asdf/keyrings/nodejs" && mkdir -p "$GNUPGHOME" && chmod 0700 "$GNUPGHOME"
 # Imports Node.js release team's OpenPGP keys to the keyring
-bash /usr/local/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
+# Apps
 brew cask install \
   gitup \
   iterm2 \
   docker \
-  heroku
 
 ./install-if-needed.sh
