@@ -17,7 +17,7 @@ install_if_needed "KnockKnock" "https://objective-see.com/products/knockknock.ht
 # Basic human needs
 install_if_needed "Dropbox" "https://1password.com/"
 install_if_needed "1Password 7" "https://1password.com/"
-install_if_needed "Alfred 3" "https://www.alfredapp.com/"
+install_if_needed "Alfred 4" "https://www.alfredapp.com/"
 install_if_needed "BetterSnapTool" "focking AppStore"
 install_if_needed "The Unarchiver" "focking AppStore"
 install_if_needed "Firefox" "https://www.mozilla.org"
