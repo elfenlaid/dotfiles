@@ -4,7 +4,7 @@ set -ex
 
 # Utils
 brew install \
-  jq bat shellcheck heroku hub
+  jq bat shellcheck heroku hub autojump
 
 # Asdf and friends
 # Maybe need to run
