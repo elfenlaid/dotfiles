@@ -31,3 +31,8 @@ brew cask install \
   docker \
 
 ./install-if-needed.sh
+
+# Create default directories
+mkdir -p ~/Code || true
+mkdir -p ~/Work || true
+mkdir -p ~/.ssh || true
