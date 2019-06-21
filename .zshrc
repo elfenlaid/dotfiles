@@ -136,3 +136,8 @@ alias draft="bundle exec jekyll draft"
 
 # Rust
 source ~/.asdf/installs/rust/stable/env
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
