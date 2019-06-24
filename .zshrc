@@ -64,6 +64,10 @@ alias gb='git checkout -b'
 alias gm='git checkout master'
 alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
 
+alias pi='pod install'
+alias piu='pod install --repo-update'
+alias pu='pod update --repo-update'
+
 mcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 
 # Launch only one ssh-agent
@@ -140,4 +144,7 @@ source ~/.asdf/installs/rust/stable/env
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
+
+# awesome rbenv for ruby
+export PATH="$HOME/.rbenv/shims:$PATH"
 
