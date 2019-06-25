@@ -64,9 +64,7 @@ alias gb='git checkout -b'
 alias gm='git checkout master'
 alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
 
-alias pi='pod install'
-alias piu='pod install --repo-update'
-alias pu='pod update --repo-update'
+bod () { bundle exec pod $* }
 
 mcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 
