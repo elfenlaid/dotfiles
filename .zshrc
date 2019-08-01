@@ -64,7 +64,7 @@ alias gb='git checkout -b'
 alias gm='git checkout master'
 alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
 
-bod () { bundle exec pod $* }
+bpod () { bundle exec pod $* }
 
 mcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 
@@ -133,7 +133,7 @@ pull-request() {
 alias cpr="pull-request"
 
 # Jekyll
-alias bekyll="bundle exec jekyll serve --drafts"
+alias bjekyll="bundle exec jekyll serve --drafts"
 alias draft="bundle exec jekyll draft"
 
 # Rust
