@@ -47,6 +47,9 @@ source $ZSH/oh-my-zsh.sh
 alias grep='grep --color'
 alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
 
+# Canadian shell
+alias please='sudo'
+
 alias l='ls -lFh'
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
