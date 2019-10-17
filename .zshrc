@@ -39,6 +39,7 @@ plugins=(
   asdf
   docker
   autojump
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -65,6 +66,7 @@ alias gd='git diff'
 alias gc='git checkout'
 alias gb='git checkout -b'
 alias gm='git checkout master'
+alias gp='git pull'
 alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
 
 bpod () { bundle exec pod $* }
@@ -112,6 +114,7 @@ pg-start() {
 }
 pg-stop() { docker stop pg-docker }
 pg-psql() { docker exec -it pg-docker psql -U postgres $* }
+pg-pg_dump() { docker exec -it pg-docker pg_dump }
 
 # Jupyter Docker
 dupyter() {
