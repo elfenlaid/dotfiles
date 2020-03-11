@@ -146,6 +146,6 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
-# awesome rbenv for ruby
-export PATH="$HOME/.rbenv/shims:$PATH"
-
+# Ruby shenenigans
+export GEM_PATH=~/.gem/ruby/2.7.0
+export PATH="/usr/local/opt/ruby/bin:$GEM_PATH:$PATH"
