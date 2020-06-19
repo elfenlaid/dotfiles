@@ -66,9 +66,9 @@ alias gc='git checkout'
 alias gb='git checkout -b'
 alias gm='git checkout master'
 alias gp='git pull'
+alias gpm='git push origin master'
+alias gri='git rebase -i master'
 alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
-
-bpod () { bundle exec pod $* }
 
 mcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 
@@ -147,5 +147,8 @@ if type brew &>/dev/null; then
 fi
 
 # Ruby shenenigans
-export GEM_PATH=~/.gem/ruby/2.7.0
-export PATH="/usr/local/opt/ruby/bin:$GEM_PATH:$PATH"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)" || true
+
+ssh-add -A &>/dev/null
