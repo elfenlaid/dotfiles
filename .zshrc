@@ -66,9 +66,9 @@ alias gc='git checkout'
 alias gb='git checkout -b'
 alias gm='git checkout master'
 alias gp='git pull'
+alias gpm='git push origin master'
+alias gri='git rebase -i master'
 alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
-
-bpod () { bundle exec pod $* }
 
 mcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 
