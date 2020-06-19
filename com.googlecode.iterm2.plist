@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -417,8 +419,10 @@
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>298 321 799 448 0 0 1440 877 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>388 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>152 226 970 603 0 0 1440 877 </string>
+	<string>299 154 970 603 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1219,6 +1223,8 @@
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.05275222081218274</real>
+			<key>Triggers</key>
+			<array/>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -1252,15 +1258,19 @@
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>6A26146D-804B-4805-805A-EBC9AA3F3B05</string>
+	<key>NoSyncLastTipTime</key>
+	<real>612799238.22677803</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>4</integer>
+	<integer>14</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>605263061.99253201</real>
+	<real>606215810.40653801</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
+	<true/>
+	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
@@ -1618,6 +1628,14 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.terminalWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>currentTab</string>
@@ -1962,6 +1980,32 @@
 	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>605090261.99235201</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>0010</string>
+		<string>0015</string>
+		<string>0004</string>
+		<string>0009</string>
+		<string>0013</string>
+		<string>0002</string>
+		<string>0018</string>
+		<string>0007</string>
+		<string>0011</string>
+		<string>0000</string>
+		<string>0016</string>
+		<string>0005</string>
+		<string>0014</string>
+		<string>0003</string>
+		<string>0008</string>
+		<string>0012</string>
+		<string>0001</string>
+		<string>000</string>
+		<string>0017</string>
+		<string>0006</string>
+		<string>0019</string>
+	</array>
+	<key>OnlyWhenMoreTabs</key>
+	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PointerActions</key>
@@ -2001,6 +2045,8 @@
 	<string>/Users/elfenlaid/Code/dotfiles</string>
 	<key>Print In Black And White</key>
 	<true/>
+	<key>PromptOnQuit</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -2010,9 +2056,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-05T08:39:24Z</date>
+	<date>2020-06-08T09:48:15Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>3740582025</integer>
+	<key>SUUpdateRelaunchingMarker</key>
+	<true/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -2023,6 +2073,8 @@
 	<true/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
+	<key>TimeBetweenTips</key>
+	<real>604800</real>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WordCharacters</key>
