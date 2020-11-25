@@ -31,9 +31,7 @@ HIST_STAMPS="dd-mm-yyyy"
 # Which plugins would you like to load?
 plugins=(
   gitignore
-  heroku
   mix
-  pod
   bundler
   asdf
   docker
@@ -43,18 +41,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Set personal aliases
-alias grep='grep --color'
-alias sgrep='grep -R -n -H -C 5 --exclude-dir={.git,.svn,CVS} '
-
-# Canadian shell
-alias please='sudo'
-
 alias l='ls -lFh'
-alias fd='find . -type d -name'
-alias ff='find . -type f -name'
-alias h='history'
-alias hgrep='fc -El 0 | grep'
 
 alias w='cd ~/Work'
 alias c='cd ~/Code'
@@ -71,6 +58,8 @@ alias gri='git rebase -i master'
 alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
 
 mcd () { mkdir -p -- "$1" && cd -P -- "$1" }
+
+alias bfg='be fastlane gen'
 
 # Launch only one ssh-agent
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
@@ -137,10 +126,6 @@ pull-request() {
 }
 
 alias cpr="pull-request"
-
-# Jekyll
-alias bjekyll="bundle exec jekyll serve --drafts"
-alias draft="bundle exec jekyll draft"
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
