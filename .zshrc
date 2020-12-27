@@ -30,11 +30,8 @@ HIST_STAMPS="dd-mm-yyyy"
 
 # Which plugins would you like to load?
 plugins=(
-  gitignore
   mix
   bundler
-  asdf
-  docker
   autojump
 )
 
@@ -67,14 +64,14 @@ if [ ! -S ~/.ssh/ssh_auth_sock ]; then
   ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
 fi
 export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-ssh-add -l > /dev/null || ssh-add
+ssh-add -l > /dev/null || ssh-add -A &>/dev/null
 
 # asdf cflags for buggy python installations
 export CFLAGS="-O2 -g -fno-stack-check -I$(xcrun --show-sdk-path)/usr/include"
 
 # Elixir & Erlang repl history
 export ERL_AFLAGS="-kernel shell_history enabled"
-export KERL_CONFIGURE_OPTIONS="--disable-hipe --without-javac --with-ssl=$(brew --prefix openssl)"
+export KERL_CONFIGURE_OPTIONS="--disable-hipe --without-javac --with-ssl=/usr/local/opt/openssl@1.1"
 export KERL_BUILD_DOCS=yes
 
 # Visual Studio Code custom launch command to keep up with zsh PATH
@@ -133,10 +130,9 @@ if type brew &>/dev/null; then
 fi
 
 # Ruby shenenigans
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)" || true
 
-ssh-add -A &>/dev/null
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
