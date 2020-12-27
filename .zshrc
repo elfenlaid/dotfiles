@@ -75,6 +75,7 @@ export CFLAGS="-O2 -g -fno-stack-check -I$(xcrun --show-sdk-path)/usr/include"
 # Elixir & Erlang repl history
 export ERL_AFLAGS="-kernel shell_history enabled"
 export KERL_CONFIGURE_OPTIONS="--disable-hipe --without-javac --with-ssl=$(brew --prefix openssl)"
+export KERL_BUILD_DOCS=yes
 
 # Visual Studio Code custom launch command to keep up with zsh PATH
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
@@ -137,3 +138,5 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)" || true
 
 ssh-add -A &>/dev/null
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
