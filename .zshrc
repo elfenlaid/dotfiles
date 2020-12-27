@@ -33,6 +33,7 @@ plugins=(
   mix
   bundler
   autojump
+  asdf
 )
 
 source $ZSH/oh-my-zsh.sh
