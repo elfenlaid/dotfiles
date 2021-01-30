@@ -4,7 +4,7 @@ set -ex
 
 # Utils
 brew install \
-  jq bat shellcheck hub autojump
+  jq bat shellcheck autojump gh
 
 # Asdf and friends
 # Maybe need to run

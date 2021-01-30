@@ -45,16 +45,16 @@ alias w='cd ~/Work'
 alias c='cd ~/Code'
 alias d='cd ~/Downloads'
 
+# Git and Github aliases
 alias gs='git status --short --branch'
 alias gd='git diff'
 alias gc='git checkout'
 alias gb='git checkout -b'
 alias gm='git checkout master'
 alias gp='git pull'
-alias gpom='git push origin master'
 alias gpm='git push origin master'
 alias gri='git rebase -i master'
-alias trim='git branch | grep -v "\*" | xargs -n 1 git branch -D;'
+alias gpr='gh pr create'
 
 mcd () { mkdir -p -- "$1" && cd -P -- "$1" }
 
@@ -114,18 +114,6 @@ dupyter() {
     -v "$PWD":/home/jovyan/ \
     jupyter/datascience-notebook
 }
-
-# Working with Github
-pull-request() {
-    local BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    local MESSAGE=$(git log --pretty=format:'%s' --date=relative master.."${BRANCH}" | tail -1)
-    echo "Creating pull request with message: ${MESSAGE}"
-
-    git push -u origin "${BRANCH}"
-    hub pull-request -m "${MESSAGE}"
-}
-
-alias cpr="pull-request"
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
